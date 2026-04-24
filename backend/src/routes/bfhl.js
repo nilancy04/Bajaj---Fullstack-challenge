@@ -5,7 +5,11 @@ import { buildHierarchies } from "../services/hierarchyBuilder.js";
 
 const router = express.Router();
 
-router.post("/bfhl", (req, res) => {
+router.get("/", (_req, res) => {
+  return res.status(200).json({ message: "BFHL GET route working" });
+});
+
+router.post("/", (req, res) => {
   const { data } = req.body ?? {};
 
   if (!Array.isArray(data)) {

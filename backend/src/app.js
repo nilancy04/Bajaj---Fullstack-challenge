@@ -16,7 +16,14 @@ app.get("/health", (_req, res) => {
   res.status(200).json({ status: "ok" });
 });
 
-app.use("/", bfhlRoutes);
+app.get("/", (_req, res) => {
+  res.status(200).json({
+    status: "ok",
+    message: "API running"
+  });
+});
+
+app.use("/bfhl", bfhlRoutes);
 
 app.use((err, _req, res, _next) => {
   res.status(500).json({
