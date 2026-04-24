@@ -7,7 +7,7 @@ import { ResultsSection } from "./results-section";
 import type { GraphProcessorResponse } from "./types";
 import { Network, Sparkles } from "lucide-react";
 
-const API_URL = "http://localhost:5000/bfhl";
+const API_URL = "http://127.0.0.1:5000/bfhl";
 
 export function GraphProcessor() {
   const [edges, setEdges] = useState("A->B, A->C, B->D");
